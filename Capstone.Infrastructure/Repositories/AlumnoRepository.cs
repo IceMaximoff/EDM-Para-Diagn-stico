@@ -23,5 +23,17 @@ namespace Capstone.Infrastructure.Repositories
             
             return alumnos;
         }
+
+        public async Task<Alumno> GetAlumno(int id)
+        {
+            var alumno = await _context.Alumno.FirstOrDefaultAsync(x=> x.IdAlumno == id);
+            return alumno;
+        }
+
+        public async Task RegistrarAlumno(Alumno alumno)
+        {
+            _context.Alumno.Add(alumno);
+            await _context.SaveChangesAsync();
+        }
     }
 }

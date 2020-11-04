@@ -7,5 +7,8 @@ namespace Capstone.Core.Interfaces
     public interface IProfesorRepository
     {
         Task<IEnumerable<Profesor>> GetProfesores();
+        Task<Profesor> GetProfesor(int id);
+        Task RegistrarProfesor(Profesor profesor);
+
     }
 }

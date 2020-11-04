@@ -22,5 +22,15 @@ namespace Capstone.Infrastructure.Repositories
             var profesores = await _context.Profesor.ToListAsync();
             return profesores;
         }
+        public async Task<Profesor> GetProfesor(int id)
+        {
+            var profesor = await _context.Profesor.FirstOrDefaultAsync(x=> x.IdProfesor==id);
+            return profesor;
+        }
+        public async Task RegistrarProfesor(Profesor profesor)
+        {
+            _context.Profesor.Add(profesor);
+            await _context.SaveChangesAsync();
+        }
     }
 }

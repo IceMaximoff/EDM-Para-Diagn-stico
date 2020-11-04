@@ -9,5 +9,6 @@ namespace Capstone.Core.Entities
         public string NombresAlumno { get; set; }
         public string ApellidosAlumno { get; set; }
         public int EdadAlumno { get; set; }
+        public int EstadoAlumno { get; set; }
     }
 }
