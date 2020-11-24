@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.Api", "Capstone.Api\Capstone.Api.csproj", "{FCA590FE-C756-45AA-BF66-DAC8EF6306DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capstone.Api", "Capstone.Api\Capstone.Api.csproj", "{FCA590FE-C756-45AA-BF66-DAC8EF6306DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.Core", "Capstone.Core\Capstone.Core.csproj", "{B413262E-4FDC-435F-AC42-FA2E6A63998B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capstone.Core", "Capstone.Core\Capstone.Core.csproj", "{B413262E-4FDC-435F-AC42-FA2E6A63998B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.Infrastructure", "Capstone.Infrastructure\Capstone.Infrastructure.csproj", "{24061592-5C81-4AFC-AC47-DEEC6DC947BA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capstone.Infrastructure", "Capstone.Infrastructure\Capstone.Infrastructure.csproj", "{24061592-5C81-4AFC-AC47-DEEC6DC947BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{26BBAEC5-663E-4945-9748-0503764B3A44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.UnitTest", "Capstone.UnitTest\Capstone.UnitTest.csproj", "{F1E93CCD-6262-448D-8FC6-1D7E49586F97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capstone.UnitTest", "Capstone.UnitTest\Capstone.UnitTest.csproj", "{F1E93CCD-6262-448D-8FC6-1D7E49586F97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.IntegrationTest", "Capstone.IntegrationTest\Capstone.IntegrationTest.csproj", "{103F994F-EDFB-4B1F-A95C-3655685167D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Capstone.IntegrationTest", "Capstone.IntegrationTest\Capstone.IntegrationTest.csproj", "{103F994F-EDFB-4B1F-A95C-3655685167D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Capstone.DM", "Capstone.DM\Capstone.DM.csproj", "{47EC0FBF-DE0A-4F97-A99A-D8CF5E5ACB6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{103F994F-EDFB-4B1F-A95C-3655685167D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{103F994F-EDFB-4B1F-A95C-3655685167D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{103F994F-EDFB-4B1F-A95C-3655685167D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EC0FBF-DE0A-4F97-A99A-D8CF5E5ACB6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EC0FBF-DE0A-4F97-A99A-D8CF5E5ACB6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EC0FBF-DE0A-4F97-A99A-D8CF5E5ACB6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EC0FBF-DE0A-4F97-A99A-D8CF5E5ACB6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

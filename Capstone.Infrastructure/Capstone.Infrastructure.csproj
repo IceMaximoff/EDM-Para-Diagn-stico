@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Capstone.Core\Capstone.Core.csproj" />
+    <ProjectReference Include="..\Capstone.DM\Capstone.DM.csproj" />
   </ItemGroup>
 
 </Project>
