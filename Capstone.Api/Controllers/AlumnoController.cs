@@ -34,5 +34,7 @@ namespace Capstone.Api.Controllers
             await _alumnoRepository.RegistrarAlumno(alumno);
             return Ok(alumno);
         }
+
+
     }
 }

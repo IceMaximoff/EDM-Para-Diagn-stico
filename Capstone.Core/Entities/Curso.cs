@@ -2,9 +2,9 @@
 
 namespace Capstone.Core.Entities
 {
-    public partial class Profesor
+    public partial class Curso
     {
-        public Profesor()
+        public Curso()
         {
             Calificacion = new HashSet<Calificacion>();
             Examen = new HashSet<Examen>();
@@ -12,11 +12,9 @@ namespace Capstone.Core.Entities
             Trabajo = new HashSet<Trabajo>();
         }
 
-        public int IdProfesor { get; set; }
-        public string NombresProfesor { get; set; }
-        public string ApellidosProfesor { get; set; }
-        public int EdadProfesor { get; set; }
-        public int EstadoProfesor { get; set; }
+        public int IdCurso { get; set; }
+        public string NombreCurso { get; set; }
+        public int EstadoCurso { get; set; }
 
         public virtual ICollection<Calificacion> Calificacion { get; set; }
         public virtual ICollection<Examen> Examen { get; set; }

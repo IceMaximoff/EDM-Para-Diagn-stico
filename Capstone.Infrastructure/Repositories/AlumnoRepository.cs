@@ -1,12 +1,9 @@
 ﻿using Capstone.Core.Entities;
 using Capstone.Core.Interfaces;
-using Capstone.DM;
 using Capstone.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Capstone.Infrastructure.Repositories
@@ -23,7 +20,7 @@ namespace Capstone.Infrastructure.Repositories
             //TEST entrenamiento de cluster
             //Cluster.Entrenar();
             var alumnos = await _context.Alumno.ToListAsync();
-            return alumnos;
+            return (IEnumerable<Alumno>)alumnos;
         }
 
         public async Task<Alumno> GetAlumno(int id)

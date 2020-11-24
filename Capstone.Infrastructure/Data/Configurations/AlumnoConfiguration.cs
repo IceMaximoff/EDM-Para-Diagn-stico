@@ -8,7 +8,7 @@ namespace Capstone.Infrastructure.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<Alumno> builder)
         {
-            builder.ToTable("Alumno");
+            //builder.ToTable("Alumno");
             builder.HasKey(e => e.IdAlumno)
                 .HasName("PK__Alumno__43FBBAC7F90142EB");
 
@@ -21,7 +21,7 @@ namespace Capstone.Infrastructure.Data.Configurations
                 .IsUnicode(false);
 
             builder.Property(e => e.EdadAlumno).HasColumnName("edadAlumno");
-            builder.Property(e => e.EstadoAlumno).HasColumnName("estadoAlumno");
+
             builder.Property(e => e.NombresAlumno)
                 .IsRequired()
                 .HasColumnName("nombresAlumno")
