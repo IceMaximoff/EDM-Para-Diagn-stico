@@ -52,10 +52,10 @@ namespace Capstone.DM
             
             var diagnosticoDto = new DiagnosticoDto
             {
-                id = predictedClusterId.ToString(),
+                /*id = predictedClusterId.ToString(),
                 //id = alumnoDataDto.id,
                 name = alumnoDataDto.name,
-                age = alumnoDataDto.age,
+                age = alumnoDataDto.age,*/
                 atRisk = (predictedClusterId==1) ? false:true
 
             };
