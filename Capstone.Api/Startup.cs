@@ -1,3 +1,4 @@
+using AutoMapper;
 using Capstone.Core.Interfaces;
 using Capstone.Infrastructure.Data;
 using Capstone.Infrastructure.Repositories;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace Capstone.Api
 {
@@ -22,11 +24,15 @@ namespace Capstone.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddControllers().AddNewtonsoftJson(options => {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
 
             //dependencia de alumno
             services.AddTransient<IAlumnoRepository, AlumnoRepository>();
             services.AddTransient<IProfesorRepository, ProfesorRepository>();
+            services.AddTransient<IDiagnosticoRepository, DiagnosticoRepository>();
             services.AddDbContext<CapstoneDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("CapstoneDB"))
 

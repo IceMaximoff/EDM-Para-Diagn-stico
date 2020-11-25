@@ -1,7 +1,10 @@
-﻿using Capstone.Core.Entities;
+﻿using AutoMapper;
+using Capstone.Core.DTOs;
+using Capstone.Core.Entities;
 using Capstone.Core.Interfaces;
-using Capstone.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Capstone.Api.Controllers
@@ -11,29 +14,36 @@ namespace Capstone.Api.Controllers
     public class AlumnoController : ControllerBase
     {
         private readonly IAlumnoRepository _alumnoRepository;
-        public AlumnoController(IAlumnoRepository alumnoRepository)
+        private readonly IMapper _mapper;
+        public AlumnoController(IAlumnoRepository alumnoRepository, IMapper mapper)
         {
             _alumnoRepository = alumnoRepository;
+            _mapper = mapper;
         }
         [HttpGet]
         public async Task<IActionResult> GetAlumnos()
         {
             var alumnos = await _alumnoRepository.GetAlumnos();
-            return Ok(alumnos);
+            var alumnosDto = _mapper.Map<IEnumerable<AlumnoDto>>(alumnos);
+            return Ok(alumnosDto);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetAlumno(int id)
         {
             var alumno = await _alumnoRepository.GetAlumno(id);
-            return Ok(alumno);
+            var alumnoDto = _mapper.Map<AlumnoDto>(alumno);
+            return Ok(alumnoDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> RegistrarAlumno(Alumno alumno)
+        public async Task<IActionResult> RegistrarAlumno(AlumnoDto alumnoDto)
         {
+            var alumno = _mapper.Map<Alumno>(alumnoDto);
             await _alumnoRepository.RegistrarAlumno(alumno);
             return Ok(alumno);
         }
+
+        
 
 
     }
